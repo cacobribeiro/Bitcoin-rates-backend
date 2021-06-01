@@ -7,8 +7,14 @@ module.exports = {
       email: Joi.string()
         .regex(regex.email)
         .required()
-        .messages({ 'string.pattern.base': 'Campos inválidos' }),
-      password: Joi.string().min(6).required(),
+        .messages({
+          'string.pattern.base': 'Campos inválidos',
+          'string.empty': 'Campos inválidos',
+        }),
+      password: Joi.string()
+        .min(6)
+        .required()
+        .messages({ 'string.min': 'Campos inválidos', 'string.empty': 'Campos inválidos' }),
     }),
   },
 };
