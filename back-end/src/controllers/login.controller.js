@@ -10,7 +10,7 @@ module.exports = {
 
       if (!data) {
 
-        res.status(400).json({ message: 'Campos inválidos' });
+        res.status(400).send({ message: 'Campos inválidos' });
 
       }
 
