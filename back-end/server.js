@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors')
 
 require('dotenv').config();
 
@@ -10,8 +11,9 @@ const invalidRoutes = require('./src/middleware/invalidRoutes')
 app.use(bodyParser.json({ limit: '100mb' }));
 app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
 
-//Verificação de Rotas invalidas.
+app.use(cors())
 
+//Verificação de Rotas invalidas.
 app.use(invalidRoutes)
 
 routes(app);
