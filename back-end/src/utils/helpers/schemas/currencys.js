@@ -13,7 +13,7 @@ module.exports = {
         .integer()
         .positive()
         .required()
-        .messages({ 'number.positive': 'Valor inválido', 'number.integer': 'Valor inválido' }),
+        .messages({ 'number.positive': 'Valor inválido', 'number.integer': 'Valor inválido', 'number.base': 'Campos Inválidos' }),
     }),
   },
 };
