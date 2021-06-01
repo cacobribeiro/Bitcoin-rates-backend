@@ -13,7 +13,6 @@ module.exports = {
   },
 
   btcPost: async (req, res) => {
-    console.log('POST');
     try {
       const results = await JSONTransformation(req.body);
 

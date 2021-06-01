@@ -10,8 +10,6 @@ module.exports = (schema) => {
     if (error) {
       const message = error.details.map((d) => d.message)[0];
 
-      console.log(message);
-
       const reqError = { message };
 
       return res.status(400).send(reqError);

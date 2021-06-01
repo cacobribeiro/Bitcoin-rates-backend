@@ -6,7 +6,5 @@ module.exports = async (data) => {
 
   const fileReady = fs.writeFileSync(path, JSON.stringify(data, null, 2));
 
-  console.log('fileReady', fileReady);
-
   return true;
 };
