@@ -5,13 +5,13 @@ const translationDescriptions = {
 };
 
 module.exports = (code, stringRate, stringDolar) => {
-  const rate = (Number(stringRate) * Number(stringDolar)).toString()
-  const floatValue = parseFloat(rate)
+  const rateFloat = stringRate * stringDolar;
+  const rate = rateFloat.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 
   return {
     code,
     rate,
     description: translationDescriptions[code],
-    rate_float: floatValue,
+    rate_float: rateFloat,
   };
 };
